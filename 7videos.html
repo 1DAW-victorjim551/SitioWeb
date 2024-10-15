@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<title>videos</title>
+
+</head>
+<body>
+	<h2>Edicion de videos</h2>
+	<p>Insertamos un video con un formato determinado, le podemos poner un ancho<br/> y un alto determinado con las etiquetas width(ancho y height (alto)</p>
+	<video src="video/mivideo.ogv" width="300" height="208"></video>
+		<p>Si queremos que aparezcan controles se utiliza el atributo controls</p>
+	<video src="video/mivideo.ogv"controls width="300" height="208"></video>
+	<p>Puede que nuestro navegador no reproduzca todos los formatos, para evitar<br/> este problema la etiqueta video ofrece una solucion alternativa:ofrecer el video en varios formatos, para que sea el propio navegador el que muestre el mas adecuado.<br/>La etiqueta se escribira de la siguiente manera:</p>
+	<video preload="none" controls width="300" height="208">
+		<source src="video/mivideo.mp4" type="video/mp4"/>
+		<source src="video/mivideo.ogg" type="video/ogg"/>
+		<source src="video/mivideo.mp4" type="video/webm"/>
+	</video>
+	<p>Ejemplo de algunos atributos de la etiqueta  video</p>
+	<p>Se carga el video y se reproduce inmediatamente, mostrando los controles</p>
+	<video src="video/mivideo.webm"width="300"height="208"autoplay controls></video>
+	<p>Muestra los controles, el video se precarga,pero no se reproduce hasta que el usiario pulse el boton de reproduccion</p>
+	<video src="video/mivideo.webm" width="300"height="208"preload controls></video>
+	<p>igual que el anterior pero el video no se precarga hasta que el usuario hace clic</p>
+	<video src="video/mivideo.webm" width="300"height="208"preload="none" controls></video>
+	<p>a continuacion debes insertar un video externo por ejemplo de youtube<br/> fijate que dure poco tiempo para conseguirlo tienes que seguir las instrucciones que de la pagina donde esta alojado el video</p>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/RgyA32RsQsc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

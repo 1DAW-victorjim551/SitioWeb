@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"/>
+	<title>Formularios</title>
+
+</head>
+<body>
+	<h2>Formulario con algunos tipos de entrada de datos</h2>
+	<p>El parámetro action indica dónde saltará cuando el usuario pulse el botón de envío<br/>
+	si es mailto, se envía por correo electrónico</p>
+	
+	<form action="mailto:micorreo@este.es" method="post" enctype="text/plain">
+		<h3 align="center">ENTRADAS POR MEDIO DE UNA LÍNEA</h3>
+		<p><label for="apellidos">Escribe tu nombre </label></p>
+		<input type="text" id="apellidos" name="apellidos" size="30" maxlength="30"/></p>
+		<p> <label for="contrasena">Escribe tu contraseña </label>
+		<input type="password" id="contrasena" name="contrasena"size="10" maxlength="10"</p>
+		<h3>ENTRADA POR MEDIO DE BOTONES RADIO</h3 
+		<p>
+		<input type="radio" id="windows" name="so" value="Windows" checked="checked"
+		<label for="windows">Windows</label>
+		<input type="radio" id="linux" name="so" value="Linux"
+		<label for="linux">Linux</label>
+		<input type="radio" id="guadalinex" name="so" value="Guadalinex">
+		<label for="guadalinex">Guadalinex</label>
+		</p>
+		<h3>ELECCION MÚLTIPLE</h3>
+		<p>¿Cuál es tu deporte favorito?</p>
+		<p>
+		<input type="checkbox" id="futbol" name="futbol"
+		<label for="futbol">fútbol</label><br/>
+		<input type="checkbox" id="natacion" name="natacion">
+		<label for="natacion">natación</label><br/>
+		<input type="checkbox" id="baloncesto" name="baloncesto">
+		<label for="baloncesto">baloncesto</label><br/>
+		</p>
+		<h3>ENTRADA POR MEDIO DE VARIAS LÍNEAS</h3>
+		<p><label for="comentario">Escribe tu comentario sobre mi formulario</label></p>
+		<p>
+		<textarea id="comentario" name="comentario" rows="3" cols="40"></textarea>
+		</p>
+		<h3>ENTRADA POR MEDIO DE MENÚS DESPLEGABLES</h3>
+		<p><label for="estudios">¿Qué estudias?</label></p>
+		<select id="estudios" name="estudios">
+		<option>primaria</option>
+		<option>secundaria</option>
+		<option>bachillerato</option>
+		<option>universidad</option>
+		</select>
+		<p><br/></p>
+		<h3>BOTONES DE ENVIO Y BORRADO</h3>
+		<input type="submit"value="enviar formulario">
+		<input type="reset" value="borrar datos">
+	</form>
+</body>
+</html>
