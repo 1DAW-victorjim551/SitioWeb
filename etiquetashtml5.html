@@ -4,8 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>etiquetashtml5</title>
+    <style>
+        body {
+            background-color: rgb(193, 236, 221);
+        }
+        footer {
+            color: rgb(60, 60, 5);
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    
+    <article>
+        <header>
+        <h1>Cabecera (Header)</h1>
+          <p>Aquí podemos observar una sección hecha por un "article" y un "header"</p>
+        </header>
+        <p>A continuación os dejaremos nuestro menú por si quieres echarle un vistazo a nuestras otras páginas</p>
+      </article>
+    <nav class="menu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="1tamaños.html">Tamaños</a></li>
+          <li><a href="2listas.html">Listas</a></li>
+        </ul>
+      </nav>
+<section>
+      <h1><mark>Luigi Boccherini</mark></h1>
+      <dialog open>
+        Nacido en la ciudad italiana de Lucca, Luigi Boccherini se erigió en uno de los compositores más notables de la segunda mitad del siglo XVIII. Gracias a su prolongada estancia en España, dio a conocer los principales géneros camerísticos y sinfónicos en nuestro país, siendo uno de los introductores del clasicismo musical.
+
+      </dialog>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+    <img src="imagenes/boccherinic.jpg" height="200px" width="130"> 
+    <audio controls>
+        <source src="audios/Luigi Boccherini_ Minuetto (classical).mp3" type="audio/mpeg">
+    </audio>
+    </section>
+
+
+    <h2>Ejemplo de canva</h2>
+    <p>Hemos hecho un circulo con la etiqueta de canva</p>
+    <canvas id="circle-canvas" height="200" width="200" style="border: 1px solid;"></canvas>
+<script>
+    let canvas = document.getElementById("circle-canvas");
+    let ctx = canvas.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(100, 100, 80, 0, 2 * Math.PI, false);
+    ctx.fillStyle = 'purple';
+    ctx.fill();
+</script>
+
+<footer>
+    <p><b>Hecho por Víctor Jiménez Martín | 1º DAW | I.E.S. Martinez Montañes</b></p>
+</footer>
 </body>
 </html>
