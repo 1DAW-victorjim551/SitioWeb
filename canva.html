@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Bouncing Ball</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+        canvas {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="lienzo" width="500" height="500"></canvas>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var canvas = document.getElementById('lienzo');
+            var context = canvas.getContext('2d');
+            var x = 250;
+            var y = 250;
+            var dx = 2;
+            var dy = 2;
+            var radius = 50;
+
+            function draw() {
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                context.beginPath();
+                context.arc(x, y, radius, 0, Math.PI * 2);
+                context.fillStyle = 'blue';
+                context.fill();
+                context.stroke();
+
+                if(x + radius > canvas.width || x - radius < 0) {
+                    dx = -dx;
+                }
+
+                if(y + radius > canvas.height || y - radius < 0) {
+                    dy = -dy;
+                }
+
+                x += dx;
+                y += dy;
+            }
+
+            setInterval(draw, 15);
+        });
+    </script>
+</body>
+</html>
