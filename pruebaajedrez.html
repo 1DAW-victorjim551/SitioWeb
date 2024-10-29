@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Tablero de Ajedrez</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="70" height="70" style="border:1px solid grey;"></canvas>
+
+    <script>
+        const c = document.getElementById("myCanvas");
+        const ctx = c.getContext("2d");
+
+        ctx.fillStyle = "black";
+        ctx.fillRect(0, 0, 35, 35); 
+        ctx.fillRect(35, 35, 35, 35); 
+
+        ctx.fillStyle = "white";
+        ctx.fillRect(35, 0, 35, 35);  
+        ctx.fillRect(0, 35, 35, 35);  
+    </script>
+</body>
+</html>
