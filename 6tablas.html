@@ -3,13 +3,44 @@
 <head>
 	<meta charset="utf-8" />
 	<title>tablas</title>
+	<style>
+		body{
+			background-color: aquamarine;
+		}
+		.tablauno{
+			background-color: red;
+		}
+		.tablados{
+			background-color: blue;
+		}
+		.tablatres{
+			background-color: blueviolet;
+		}
+		.tablacuatro{
+			background-color: yellowgreen;
+		}
+		.tablacinco{
+			background-color: palegoldenrod;
+		}
+		.tablaseis{
+			background-color: darkgreen;
+		}
+		.tablasiete{
+			background-color: violet;
+		}
 
+		.filaunotablauno{
+			background-color: gold;
+		}
+	
+
+	</style>
 </head>
 
 <body>
-	<table border="1" ; align = "center">
+	<table border="1" ; align = "center" class="tablauno">
 		<caption><b>tabla simple</b></caption>
-		<tr> 
+		<tr class="filaunotablauno"> 
 			<td>fila1-celda1</td>
 			<td>fila1-celda2</td>
 			<td>fila1-celda3</td>
@@ -21,7 +52,7 @@
 		</tr>
 	</table>
 	<p><br/></p>
-	<table border="2">
+	<table border="2" class="tablados">
 		<caption><b>tabla con cabeceras</b></caption>
 		<tr> 
 			<td>fila1-columna1</td>
@@ -35,7 +66,7 @@
 		</tr>
 	</table>
 	<p><br/></p>
-	<table border="1">
+	<table border="1" class="tablatres">
 		<caption><b>tabla con celdas unidas</b></caption>
 		<tr> 
 			<td colspan="3"; align="center">celda sobre 3 columnas</td>
@@ -51,7 +82,7 @@
 		</tr>
 	</table>
 	<p><br/></p>
-	<table border="1">
+	<table border="1" class="tablacuatro">
 		<caption><b>tabla con filas unidas</b></caption>
 		<tr> 
 			<td rowspan="2">texto sobre dos filas</td>
@@ -64,7 +95,7 @@
 		</tr>
 	</table>
 	<p><br/></p>
-	<table border="5"; cellspacing="20">
+	<table border="5"; cellspacing="20" class="tablacinco">
 		<caption><b>tabla con separacion entre celdas</b></caption>
 		<tr> 
 		<td>fila1-celda1</td>
@@ -78,7 +109,7 @@
 		</tr>
 	</table>
 	<p><br/></p>
-	<table border="1"; cellpadding="10">
+	<table border="1"; cellpadding="10" class="tablaseis">
 		<caption><b>tabla con separacion entre borde y contenido de la celda</b></caption>
 		<tr> 
 			<td>fila1-celda1</td>
@@ -92,7 +123,7 @@
 		</tr>
 	</table>
 	<p><br/></p>
-	<table border="2">
+	<table border="2" class="tablasiete">
 		<caption><b>tabla con cabecera, cuerpo y pie</b></caption>
 		<thead>
 		<tr> 
