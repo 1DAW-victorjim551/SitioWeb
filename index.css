@@ -1,4 +1,5 @@
-*{ vertical-align: baseline;
+* {
+    vertical-align: baseline;
 }
 
 body {
@@ -6,57 +7,72 @@ body {
     padding: 0;
 }
 
-.navbarvertical {
-    display: flex;
-    margin-right: 10px;
-    margin: 0;
+.navbar {
+    display: inline; /*Hace que el elemento se comporte como un elemento en línea, ocupando solo el espacio necesario para su contenido y permitiendo que otros elementos se sitúen a su lado.*/
 }
 
-.navbarvertical a{
+.navbarvertical {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    font-family: 'Monaco', monospace;
+}
+
+.navbarvertical ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbarvertical a {
     display: block;
-    padding: 20px 20px;
-    color:#435055;
+    padding: 10px;
+    color: #435055;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 20px;
     background: rgb(97, 212, 97);
     border: 1px solid black;
-}
-
-.navbarvertical ul {
-    list-style-type: none;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .navbarvertical a:hover {
-    background:#d699d6;
+    background: #d699d6;
 }
 
 .navbarhorizontal {
+    display: flex;
     background: rgb(16, 139, 187);
     font-family: sans-serif;
-    width: 100;
-    overflow: hidden;
+    margin: 0; /*Eliminamos con este valor los márgenes exteriores*/
+    padding: 0; /*Eliminamos con este valor el relleno interior de un elemento*/
+    flex-grow: 1;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.navbarhorizontal ul {
+    display: flex;
+    list-style-type: none; /*Con este valor podremos eliminar las puntuaciones de las listas normales o enumeradas */
+    margin: 0;
+    padding: 0;
+}
+
+.navbarhorizontal li {
     margin: 0;
 }
 
-.navbarhorizontal li a{
-    display: block;
-    padding: 20px 20px;
-    text-decoration: none;
+.navbarhorizontal li a {
+    display: block; /*Hace que el elemento se comporte como un bloque*/
+    padding: 5px 10px;
+    text-decoration: none; /*Elimina decoraciones de texto, como el subrayado en enlaces*/
     font-size: 20px;
     text-align: center;
     color: #0f1111;
     border: 1px solid black;
 }
 
-.navbarhorizontal ul{
-    list-style-type: none;
-}
-.navbarhorizontal li{
-    float: left;
-}
-
 .navbarhorizontal a:hover {
-    background:#d699d6;
+    background: #d699d6;
 }
-
