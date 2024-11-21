@@ -6,59 +6,190 @@
     <title>CSSS3</title>
     <style>
         .opacidad{
-            background-color: red;
-            opacity: 80%;
-            border-radius: 25px;
+            background-color: rgba(255, 0, 0, 0.8);
             padding: 20px;
             width: 90px;
             height: 50px; 
         }
 
         .tono{
-            opacity: 80%;
+            background-color: hsl(180, 80%, 20%);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            width: fit-content;
+        }
+
+        .tono2{
+            background-color: hsla(70, 20%, 80%, 50%);
+            color: rgb(0, 0, 0);
+            padding: 5px 10px;
+            border-radius: 5px;
+            width: fit-content;
+        }
+
+        .gradientes{
+            background-image: linear-gradient(rgb(134, 164, 219), rgb(192, 88, 218));
+            width: fit-content;
         }
         .esquinas {
-            background-color: red;
+            background-color: rgb(158, 236, 106);
             opacity: 80%;
             border-radius: 25px;
             padding: 20px;
-            width: 150px;
-            height: 80px; 
+            width: fit-content;
+            height: fit-content; 
         }
+        .esquinas2{
+            background-color: rgb(103, 210, 218);
+            opacity: 80%;
+            border-radius: 25px;
+            padding: 20px;
+            width: fit-content;
+            height: fit-content; 
+        }
+
+        .mitabla{
+            box-shadow: 10px 10px 20px #000000;
+        }
+
+        .mitablados{
+            width: 200px;
+            height: 100px;
+            background: red;
+            transition: ease width 2s;
+        }
+        .mitablados:hover {
+            width: 50px;
+            height: 50px;
+        }
+
+        .rotar{
+            transform: rotate(20deg);
+            color: black;
+            border-radius: 50px;
+            background-color: rgb(87, 219, 153);
+            width: fit-content;
+            margin-top: 60px;
+        }
+
+        .opacidad2{
+            opacity: 0.8;
+            background-color: rgb(74, 231, 231);
+            width: fit-content;
+        }
+
+        .columnauno{
+            columns: 3;
+            column-gap: 20px;
+            column-rule-style: dashed;
+        }
+        #cajal   { float:  none;  background-color:    #5e44dc;  color: #ffffff;  height:  200px;  width:  400px;  animation: animacionuno 3s;}
+        #caja2  { background-color:    #942ab4;  color: #ffffff;  height:  100px; width:  200px; animation: animaciondos 3s;}
+        #caja3 {background-color:    #942ab4;  color: #ffffff;  height:  70px; width:  70px; animation: animaciontres 4s; animation-iteration-count: 4; }
+        @keyframes animacionuno {
+  from {background-color: #5e44dc;}
+  to {background-color: yellow;}
+} 
+@keyframes animaciondos {
+  from {background-color: #942ab4;}
+  to {background-color: rgb(73, 230, 81);}
+} 
+@keyframes animaciontres {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+.cajatamanuno{
+    float: left; background-color:#5e44dc;  width:  400px;  color: #ffffff;
+    box-sizing: 6px;
+    border: 2px;
+}
+.cajatamandos{
+    background-color:    #942ab4;  color:  #ffffff;
+    box-sizing: 6px;
+    border: 2px;
+}
     </style>
 </head>
 <body>
     <h2>Opacidad y transpaparencia</h2>
-    <div class="opacidad">
-        <h1>Victor</h1>
-    </div>
-    
-    <br>
-    <div class="tono">
-        <h2>Jimenez</h2>
-
-    </div>
-    
-    <br>
-    <div class="gradientes">
-        <h2>Gradientes</h2>
-    </div>
-
-    <br>
-    <div class="esquinas">
-        <h2>Esquinas redondeadas</h2>
-    </div>
-    
+    <h1 class="opacidad">Victor</h1>
     <br>
 
-    <div class="sombras">
-        <h2>Sombras</h2>
-    </div>
-    
+    <h2>Tono, saturacion e iluminosidad</h2>
+        <h2 class="tono">Jimenez</h2>
+        <h3 class="tono2">Martin</h3>
     <br>
-    <div class="transiciones">
-        <h2>Transiciones</h2>
+
+    <h2>Gradientes</h2>
+    <h2 class="gradientes">Avenida de la Paz, 57</h2>
+<br>
+    <h2>Esquinas redondeadas</h2>
+    <h2 class="esquinas">Victor</h2>
+    <h2 class="esquinas2">Jimenez Martin</h2>
+    <br>
+    <h2>Sombras</h2>
+    <table class="mitabla" border="2" cellpadding="10">
+        <caption><b>Mi tabla con sombras</b></caption>
+        <tr> 
+            <td>fila1-celda1</td>
+            <td>fila1-celda2</td>
+            <td>fila1-celda3</td>
+        </tr>
+        <tr> 
+            <td>fila2-celda1</td>
+            <td>fila2-celda2</td>
+            <td>fila2-celda3</td>
+        </tr>
+    </table>
+    <br>
+    <h2>Transiciones</h2>
+    <table class="mitablados" border="1" >
+		<caption><b>tabla simple</b></caption>
+		<tr> 
+			<td>fila1-celda1</td>
+			<td>fila1-celda2</td>
+			<td>fila1-celda3</td>
+		</tr>
+		<tr> 
+			<td>fila1-celda1</td>
+			<td>fila1-celda2</td>
+			<td>fila1-celda3</td>
+		</tr>
+	</table>
+<br>
+    <h2>Transformaciones</h2>
+    <h2 class="rotar">Este texto ha sido rotado!</h2>
+<br>
+<h2>Opacidad</h2>
+<h2 class="opacidad2">Victor Jimenez</h2>
+<br>
+<h2>Columnas</h2>
+<p class="columnauno">Lorem ipsum dolor sit amet consectetur adipiscing elit rhoncus sagittis, integer hendrerit mi eget magnis pretium nascetur nisi enim, accumsan quis maecenas class phasellus lobortis interdum vulputate. Fermentum viverra nulla dis congue nisi nibh aenean convallis id, curabitur vulputate a imperdiet vestibulum nam malesuada lectus montes, tempus donec elementum mollis commodo tempor diam hac. Torquent magnis luctus tincidunt class eu cubilia auctor ullamcorper rhoncus netus, litora sed id nunc potenti molestie ultricies augue eros tellus, fermentum est at donec ligula congue libero faucibus hendrerit.</p>
+<br>
+<h2>Animaciones</h2>
+<div id="cajal">
+    <p> CAJA1,  tiene propiedad   float puesta  a none,  por lo que aparece  donde  le corresponde  sin  flotar</p>
+     
     </div>
-    
+    <div id="caja2">
+    <p>Esta  es la CAJA2 , por defecto  aparece  debajo  de la primera  caja. No usa la propiedad  <b>float</b>  </p>
+    <div id="caja3">
+    </div>
+</div>
+
+<h2>Tamaño de cajas</h2>
+<div id="cajatamanuno">
+    <p>Esta  es la primera  caja <br/>
+    flota a la izquierda  de la segunda  caja </p>
+</div>
+<div id="cajatamandos">
+    <p>Esta  es la caja dos, la caja una <br/>
+    flota a la izquierda  de esta caja</p>
+</div>
 </body>
 </html>
