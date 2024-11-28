@@ -17,6 +17,10 @@
 			font-size: 40px;
 		}
 	
+		.nuevo_idioma1{
+			width: 240px;
+			height: fit-content;
+		}
 	</style>
 </head>
 <body>
@@ -30,6 +34,20 @@
 		<input type="text" id="apellidos" name="apellidos" size="30" maxlength="30"/></p>
 		<p> <label for="contrasena">Escribe tu contraseña </label>
 		<input type="password" id="contrasena" name="contrasena"size="10" maxlength="10"</p>
+		<p><label for="email">Escribe tu correo electrónico</label></p>
+		<input type="calle" id="calle" name="calle" size="10"
+		<p><label for="calle">Calle</label></p>
+		<input type="num" id="num" name="num" size="10"
+		<p><label for="num">Número</label></p>
+		<input type="piso" id="piso" name="piso" size="10"
+		<p><label for="piso">Piso</label></p>
+		<input type="letra" id="letra" name="letra" size="10"
+		<p><label for="letra">Letra</label></p>
+		<input type="cp" id="cp" name="cp" size="10"
+		<p><label for="cp">Código Postal</label></p>
+		<input type="provincia" id="provincia" name="provincia" size="10"
+		<p><label for="provincia">Provincia</label></p>
+		<input type="provincia" id="provincia" name="provincia" size="10"
 		<h3>ENTRADA POR MEDIO DE BOTONES RADIO</h3 
 		<p>
 		<input type="radio" id="windows" name="so" value="Windows" checked="checked"
@@ -62,6 +80,78 @@
 		<option>bachillerato</option>
 		<option>universidad</option>
 		</select>
+		<br>
+		<br>
+		<td bgcolor="#D4EBF8">
+			<h3 style="color: #4A4A4A; text-align: center; font-family: Arial, Helvetica, sans-serif;"><u>IDIOMAS</u></h3>
+			<table style="border-collapse: collapse;" border="1" cellpadding="5" cellspacing="2" width="100%">
+            <table border="3" colspan="3px" rowspan="5px">
+                <tr>
+                    <td colspan="4px" rowspan="6px"><b>Idioma</b></td>
+                    <td colspan="2px"><b>Nivel escrito</b></td>
+                    <td colspan="2px"><b>Nivel hablado</b></td>
+                </tr>
+                <tr>
+                    <td><b>Inglés</b></td>
+                    <td>
+                        <select name="idiomasopciones">
+                            <option value="alto">ALTO</option>
+                            <option value="medio">MEDIO</option>
+                            <option value="bajo">BAJO</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="idiomasopciones">
+                            <option value="alto">ALTO</option>
+                            <option value="medio">MEDIO</option>
+                            <option value="bajo">BAJO</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Francés</b></td>
+                    <td>
+                        <select name="idiomasopciones">
+                            <option value="alto">ALTO</option>
+                            <option value="medio">MEDIO</option>
+                            <option value="bajo">BAJO</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="idiomasopciones">
+                            <option value="alto">ALTO</option>
+                            <option value="medio">MEDIO</option>
+                            <option value="bajo">BAJO</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Alemán</b></td>
+                    <td>
+                        <select name="idiomasopciones">
+                            <option value="alto">ALTO</option>
+                            <option value="medio">MEDIO</option>
+                            <option value="bajo">BAJO</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="idiomasopciones">
+                            <option value="alto">ALTO</option>
+                            <option value="medio">MEDIO</option>
+                            <option value="bajo">BAJO</option>
+                        </select>
+                    </td>
+
+					<td><b>idioma</b></td>
+                    <td>
+                        <select name="idiomasopciones">
+                            <option value="alto">ALTO</option>
+                            <option value="medio">MEDIO</option>
+                            <option value="bajo">BAJO</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
 		<p><br/></p>
 		<h3>BOTONES DE ENVIO Y BORRADO</h3>
 		<input type="submit"value="enviar formulario">
