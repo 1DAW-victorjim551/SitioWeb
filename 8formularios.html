@@ -1,148 +1,235 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="utf-8"/>
-	<title>Formularios</title>
-	<style>
-		input { 
-		width: 100%; padding: 10px; margin-bottom: 10px;
-		}
-		* { 
-			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-		}
-		.formulario{
-			background-color: aquamarine;
-		}
-		#titulo{
-			font-size: 40px;
-		}
-	
-		.nuevo_idioma1{
-			width: 240px;
-			height: fit-content;
-		}
-	</style>
+    <meta charset="utf-8"/>
+    <title>Formularios</title>
+    <style>
+        input { 
+            width: fit-content;
+            padding: 10px; 
+            margin-bottom: 10px;
+            box-sizing: border-box; 
+        }
+        * { 
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .formulario {
+            display: flex;
+        }
+        .columna {
+            flex: 1;
+            padding: 10px;
+        }
+        .columna-izquierda {
+            background-color: rgb(88, 235, 186);
+        }
+        .columna-derecha {
+            background-color: rgb(240, 179, 99);
+        }
+        .miweb{
+            background-color: rgb(108, 142, 235);
+        }
+        .multiple{
+            background-color: rgb(224, 116, 73);
+        }
+
+        .radio{
+            background-color: rgb(69, 161, 100);
+        }
+
+        .lineas{
+            background-color: rgb(113, 82, 226);
+            animation: anilineas 4s;
+        }
+
+        .desplegable{
+            background-color: rgb(202, 223, 128);
+        }
+
+        .botones{
+            background-color: rgb(235, 98, 143);
+        }
+
+        #titulo {
+            font-size: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        a { 
+            color: blue; 
+            display: inline-block; 
+            transition: transform 0.3s ease-in-out, 0.3s ease-in-out;
+        } 
+        a:hover { 
+            transform: scale(1.2);
+        } 
+        a:visited { 
+            color: yellow; 
+        }
+       
+        .rotar {
+            transform: rotate(20deg);
+            display: inline-block;
+        }
+        @keyframes anilineas {
+            from {background-color: rgb(113, 82, 226);}
+            to {background-color: aquamarine;} 
+        }
+    </style>
 </head>
 <body>
-	<h2 id="titulo">Formulario con algunos tipos de entrada de datos</h2>
-	<p>El parámetro action indica dónde saltará cuando el usuario pulse el botón de envío<br/>
-	si es mailto, se envía por correo electrónico</p>
-	
-	<form action="mailto:micorreo@este.es" method="post" enctype="text/plain" class="formulario">
-		<h3 align="center">ENTRADAS POR MEDIO DE UNA LÍNEA</h3>
-		<p><label for="apellidos">Escribe tu nombre </label></p>
-		<input type="text" id="apellidos" name="apellidos" size="30" maxlength="30"/></p>
-		<p> <label for="contrasena">Escribe tu contraseña </label>
-		<input type="password" id="contrasena" name="contrasena"size="10" maxlength="10"</p>
-		<p><label for="email">Escribe tu correo electrónico</label></p>
-		<input type="calle" id="calle" name="calle" size="10"
-		<p><label for="calle">Calle</label></p>
-		<input type="num" id="num" name="num" size="10"
-		<p><label for="num">Número</label></p>
-		<input type="piso" id="piso" name="piso" size="10"
-		<p><label for="piso">Piso</label></p>
-		<input type="letra" id="letra" name="letra" size="10"
-		<p><label for="letra">Letra</label></p>
-		<input type="cp" id="cp" name="cp" size="10"
-		<p><label for="cp">Código Postal</label></p>
-		<input type="provincia" id="provincia" name="provincia" size="10"
-		<p><label for="provincia">Provincia</label></p>
-		<input type="provincia" id="provincia" name="provincia" size="10"
-		<h3>ENTRADA POR MEDIO DE BOTONES RADIO</h3 
-		<p>
-		<input type="radio" id="windows" name="so" value="Windows" checked="checked"
-		<label for="windows">Windows</label>
-		<input type="radio" id="linux" name="so" value="Linux"
-		<label for="linux">Linux</label>
-		<input type="radio" id="guadalinex" name="so" value="Guadalinex">
-		<label for="guadalinex">Guadalinex</label>
-		</p>
-		<h3>ELECCION MÚLTIPLE</h3>
-		<p>¿Cuál es tu deporte favorito?</p>
-		<p>
-		<input type="checkbox" id="futbol" name="futbol"
-		<label for="futbol">fútbol</label><br/>
-		<input type="checkbox" id="natacion" name="natacion">
-		<label for="natacion">natación</label><br/>
-		<input type="checkbox" id="baloncesto" name="baloncesto">
-		<label for="baloncesto">baloncesto</label><br/>
-		</p>
-		<h3>ENTRADA POR MEDIO DE VARIAS LÍNEAS</h3>
-		<p><label for="comentario">Escribe tu comentario sobre mi formulario</label></p>
-		<p>
-		<textarea id="comentario" name="comentario" rows="3" cols="40"></textarea>
-		</p>
-		<h3>ENTRADA POR MEDIO DE MENÚS DESPLEGABLES</h3>
-		<p><label for="estudios">¿Qué estudias?</label></p>
-		<select id="estudios" name="estudios">
-		<option>primaria</option>
-		<option>secundaria</option>
-		<option>bachillerato</option>
-		<option>universidad</option>
-		</select>
-		<br>
-		<br>
-		<td bgcolor="#D4EBF8">
-			<h3 style="color: #4A4A4A; text-align: center; font-family: Arial, Helvetica, sans-serif;"><u>IDIOMAS</u></h3>
-			<table style="border-collapse: collapse;" border="1" cellpadding="5" cellspacing="2" width="100%">
-            <table border="3" colspan="3px" rowspan="5px">
-                <tr>
-                    <td colspan="4px" rowspan="6px"><b>Idioma</b></td>
-                    <td colspan="2px"><b>Nivel escrito</b></td>
-                    <td colspan="2px"><b>Nivel hablado</b></td>
-                </tr>
-                <tr>
-                    <td><b>Inglés</b></td>
-                    <td>
-                        <select name="idiomasopciones">
-                            <option value="alto">ALTO</option>
-                            <option value="medio">MEDIO</option>
-                            <option value="bajo">BAJO</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select name="idiomasopciones">
-                            <option value="alto">ALTO</option>
-                            <option value="medio">MEDIO</option>
-                            <option value="bajo">BAJO</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td><b>Francés</b></td>
-                    <td>
-                        <select name="idiomasopciones">
-                            <option value="alto">ALTO</option>
-                            <option value="medio">MEDIO</option>
-                            <option value="bajo">BAJO</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select name="idiomasopciones">
-                            <option value="alto">ALTO</option>
-                            <option value="medio">MEDIO</option>
-                            <option value="bajo">BAJO</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td><b>Alemán</b></td>
-                    <td>
-                        <select name="idiomasopciones">
-                            <option value="alto">ALTO</option>
-                            <option value="medio">MEDIO</option>
-                            <option value="bajo">BAJO</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select name="idiomasopciones">
-                            <option value="alto">ALTO</option>
-                            <option value="medio">MEDIO</option>
-                            <option value="bajo">BAJO</option>
-                        </select>
-                    </td>
+    <h2 id="titulo"><mark>Formulario con algunos tipos de entrada de datos</mark></h2>
+    <p>El parámetro action indica dónde saltará cuando el usuario pulse el botón de envío<br/>
+    si es mailto, se envía por correo electrónico</p>
 
-					<td><b>idioma</b></td>
+    <div class="formulario">
+        <div class="columna columna-izquierda">
+            <form action="mailto:micorreo@este.es" method="post" enctype="text/plain">
+                <h3 align="center"><mark>POR MEDIO DE UNA LÍNEA</mark></h3>
+                <p><label for="apellidos">Escribe tu nombre </label></p>
+                <input type="text" id="apellidos" name="apellidos" size="30" maxlength="30"/>
+                <p><label for="contrasena">Escribe tu contraseña </label></p>
+                <input type="password" id="contrasena" name="contrasena" size="10" maxlength="10"/>
+                <p><label for="email">Escribe tu correo electrónico</label></p>
+                <input type="email" id="email" name="email" size="30"/>
+                <p><label for="calle">Calle</label></p>
+                <input type="text" id="calle" name="calle" size="10"/>
+                <p><label for="num">Número</label></p>
+                <input type="text" id="num" name="num" size="10"/>
+                <p><label for="piso">Piso</label></p>
+                <input type="text" id="piso" name="piso" size="10"/>
+                <p><label for="letra">Letra</label></p>
+                <input type="text" id="letra" name="letra" size="10"/>
+                <p><label for="cp">Código Postal</label></p>
+                <input type="text" id="cp" name="cp" size="10"/>
+                <p><label for="provincia">Provincia</label></p>
+                <input type="text" id="provincia" name="provincia" size="10"/>
+            </form>
+        </div>
+
+        <div class="columna columna-derecha">
+            <div class="miweb">
+            <h2><mark>Mi página web</mark></h2>
+            <a href="https://1daw-victorjim551.github.io/SitioWeb/" target="about:blank" class="zoom">Mi sitio Web!</a>
+            </div>
+            <div class="radio">
+            <h3><mark>ENTRADA POR MEDIO DE BOTONES RADIO</mark></h3> 
+            <p>
+                <input type="radio" id="windows" name="so" value="Windows" checked="checked"/>
+                <label for="windows">Windows</label>
+                <input type="radio" id="linux" name="so" value="Linux"/>
+                <label for="linux">Linux</label>
+                <input type="radio" id="guadalinex" name="so" value="Guadalinex"/>
+                <label for="guadalinex">Guadalinex</label>
+            </p>
+            </div>
+
+            <div class="multiple">
+            <h3><mark>ELECCION MÚLTIPLE</mark></h3>
+            <p>¿Cuál es tu deporte favorito?</p>
+            <p>
+                <input type="checkbox" id="futbol" name="futbol"/>
+                <label for="futbol">fútbol</label><br/>
+                <input type="checkbox" id="natacion" name="natacion"/>
+                <label for="natacion">natación</label><br/>
+                <input type="checkbox" id="baloncesto" name="baloncesto"/>
+                <label for="baloncesto">baloncesto</label><br/>
+            </p>
+            </div>
+
+            <div class="lineas">
+            <h3><mark>ENTRADA POR MEDIO DE VARIAS LÍNEAS</mark></h3>
+            <p><label for="comentario">Escribe tu comentario sobre mi formulario</label></p>
+            <p>
+                <textarea id="comentario" name="comentario" rows="3" cols="40"></textarea>
+            </p>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="desplegable">
+            <h3 class="rotar"><mark>ENTRADA POR MEDIO DE MENÚS DESPLEGABLES</mark></h3>
+            <p><label for="estudios">¿Qué estudias?</label></p>
+            <select id="estudios" name="estudios">
+                <option>primaria</option>
+                <option>secundaria</option>
+                <option>bachillerato</option>
+                <option>universidad</option>
+            </select>
+            <br><br>
+            <table>
+                <tr>
+                    <th>Idioma</th>
+                    <th>Nivel escrito</th>
+                    <th>Nivel hablado</th>
+                </tr>
+                <tr>
+                    <td>Inglés</td>
+                    <td>
+                        <select name="idiomasopciones">
+                            <option value="alto">ALTO</option>
+                            <option value="medio">MEDIO</option>
+                            <option value="bajo">BAJO</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="idiomasopciones">
+                            <option value="alto">ALTO</option>
+                            <option value="medio">MEDIO</option>
+                            <option value="bajo">BAJO</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Francés</td>
+                    <td>
+                        <select name="idiomasopciones">
+                            <option value="alto">ALTO</option>
+                            <option value="medio">MEDIO</option>
+                            <option value="bajo">BAJO</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="idiomasopciones">
+                            <option value="alto">ALTO</option>
+                            <option value="medio">MEDIO</option>
+                            <option value="bajo">BAJO</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Alemán</td>
+                    <td>
+                        <select name="idiomasopciones">
+                            <option value="alto">ALTO</option>
+                            <option value="medio">MEDIO</option>
+                            <option value="bajo">BAJO</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="idiomasopciones">
+                            <option value="alto">ALTO</option>
+                            <option value="medio">MEDIO</option>
+                            <option value="bajo">BAJO</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Otro Idioma | <input type="text" id="nuevo_idioma" name="nuevo_idioma" size="30" maxlength="30"/></td>
+                    <td>
+                        <select name="idiomasopciones">
+                            <option value="alto">ALTO</option>
+                            <option value="medio">MEDIO</option>
+                            <option value="bajo">BAJO</option>
+                        </select>
+                    </td>
                     <td>
                         <select name="idiomasopciones">
                             <option value="alto">ALTO</option>
@@ -152,10 +239,16 @@
                     </td>
                 </tr>
             </table>
-		<p><br/></p>
-		<h3>BOTONES DE ENVIO Y BORRADO</h3>
-		<input type="submit"value="enviar formulario">
-		<input type="reset" value="borrar datos">
-	</form>
-</body>
-</html>
+            <br>
+            </div>
+            <div class="botones">
+            <center>
+                <h3><mark>BOTONES DE ENVIO Y BORRADO</mark></h3>
+            <input type="submit" value="Enviar formulario">
+            <input type="reset" value="Borrar datos">
+            </center>
+            </div>
+        </form>
+        </div>
+    </body>
+    </html>
