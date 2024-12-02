@@ -79,60 +79,129 @@
             width: fit-content;
         }
 
+        .opacidad3 {
+            background-color: yellow;
+            color: black;
+            width: 300px;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid black;
+            position: relative;
+            z-index: 2;
+        }
+
+        .opacidad3_1 {
+            background-color: rgba(0, 128, 0, 0.2);
+            color: black;
+            width: 300px;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid black;
+            position: relative;
+            top: -100px;
+            left: 50px;
+            z-index: 1;
+        }
+
         .columnauno{
             columns: 3;
             column-gap: 20px;
             column-rule-style: dashed;
         }
-        #cajal   { float:  none;  background-color:    #5e44dc;  color: #ffffff;  height:  200px;  width:  400px;  animation: animacionuno 3s;}
-        #caja2  { background-color:    #942ab4;  color: #ffffff;  height:  100px; width:  200px; animation: animaciondos 3s;}
-        #caja3 {background-color:    #942ab4;  color: #ffffff;  height:  70px; width:  70px; animation: animaciontres 4s; animation-iteration-count: 4; }
+        
+        #cajal {
+            float: none;
+            background-color: #5e44dc;
+            color: #ffffff;
+            height: 200px;
+            width: 400px;
+            animation: animacionuno 3s infinite;
+        }
+
+        #caja2 {
+            background-color: #942ab4;
+            color: #ffffff;
+            height: 100px;
+            width: 200px;
+            animation: animaciondos 3s infinite;
+        }
+
+        #caja3 {
+            background-color: #942ab4;
+            color: #ffffff;
+            height: 70px;
+            width: 70px;
+            position: relative;
+            animation: animaciontres 4s infinite;
+        }
+
         @keyframes animacionuno {
-  from {background-color: #5e44dc;}
-  to {background-color: yellow;}
-} 
-@keyframes animaciondos {
-  from {background-color: #942ab4;}
-  to {background-color: rgb(73, 230, 81);}
-} 
-@keyframes animaciontres {
-  0%   {background-color:red; left:0px; top:0px;}
-  25%  {background-color:yellow; left:200px; top:0px;}
-  50%  {background-color:blue; left:200px; top:200px;}
-  75%  {background-color:green; left:0px; top:200px;}
-  100% {background-color:red; left:0px; top:0px;}
+            from { background-color: #5e44dc; }
+            to { background-color: yellow; }
+        }
+
+        @keyframes animaciondos {
+            from { background-color: #942ab4; }
+            to { background-color: rgb(73, 230, 81); }
+        }
+
+        @keyframes animaciontres {
+            0% { background-color: red; left: 0px; top: 0px; }
+            25% { background-color: yellow; left: 200px; top: 0px; }
+            50% { background-color: blue; left: 200px; top: 200px; }
+            75% { background-color: green; left: 0px; top: 200px; }
+            100% { background-color: red; left: 0px; top: 0px; }
+        }
+
+    #cajatamanuno{
+    float: left; background-color:#5e44dc;  ;  
+    color: #ffffff;
+    box-sizing: 3px;
+    border: 2px;
+    width: fit-content;
+    height: fit-content;
+}
+    #cajatamandos{
+    background-color:    #942ab4;  
+    color:  #ffffff;
+    box-sizing: 6px;
+    border: 2px;
+    width: fit-content;
+    height: fit-content;
 }
 
-.cajatamanuno{
-    float: left; background-color:#5e44dc;  width:  400px;  color: #ffffff;
-    box-sizing: 6px;
-    border: 2px;
-}
-.cajatamandos{
-    background-color:    #942ab4;  color:  #ffffff;
-    box-sizing: 6px;
-    border: 2px;
+h3{
+    border-radius: 25px;
+    background-color: rgb(156, 197, 253);
+    width: fit-content;
+    height: fit-content;
 }
     </style>
 </head>
 <body>
     <h2>Opacidad y transpaparencia</h2>
+    <h3>Le añade opacidad y transparencia al recuadro con el nombre</h3>
     <h1 class="opacidad">Victor</h1>
     <br>
 
     <h2>Tono, saturacion e iluminosidad</h2>
+    <h3>Le añade saturación al recuadro</h3>
         <h2 class="tono">Jimenez</h2>
+        <h3>Le añade luminosidad al recuadro</h3>
         <h3 class="tono2">Martin</h3>
     <br>
 
     <h2>Gradientes</h2>
+    <h3>Añadimos un recuadro que recorre varios colores</h3>
     <h2 class="gradientes">Avenida de la Paz, 57</h2>
 <br>
     <h2>Esquinas redondeadas</h2>
+    <h3>Le añade esquinas redondeadas a los recuadros</h3>
     <h2 class="esquinas">Victor</h2>
     <h2 class="esquinas2">Jimenez Martin</h2>
     <br>
     <h2>Sombras</h2>
+    <h3>Le añade sombras al borde de la tabla   </h3>
     <table class="mitabla" border="2" cellpadding="10">
         <caption><b>Mi tabla con sombras</b></caption>
         <tr> 
@@ -148,6 +217,7 @@
     </table>
     <br>
     <h2>Transiciones</h2>
+    <h3>Creamos una animación para nuestra tabla</h3>
     <table class="mitablados" border="1" >
 		<caption><b>tabla simple</b></caption>
 		<tr> 
@@ -163,15 +233,22 @@
 	</table>
 <br>
     <h2>Transformaciones</h2>
+    <h3>Transformamos el objeto del texto, en este caso hemos rotado el mismo 20 grados</h3>
     <h2 class="rotar">Este texto ha sido rotado!</h2>
 <br>
 <h2>Opacidad</h2>
+<h3>Le añadimos opacidad al texto de 0.8</h3>
 <h2 class="opacidad2">Victor Jimenez</h2>
 <br>
+<h2 class="opacidad3">Víctor</h2>
+    <h2 class="opacidad3_1">Jiménez Martín</h2>
+<br>
 <h2>Columnas</h2>
+<h3>Le añadimos propiedades al mismo texto para fragmentarlo en columnas</h3>
 <p class="columnauno">Lorem ipsum dolor sit amet consectetur adipiscing elit rhoncus sagittis, integer hendrerit mi eget magnis pretium nascetur nisi enim, accumsan quis maecenas class phasellus lobortis interdum vulputate. Fermentum viverra nulla dis congue nisi nibh aenean convallis id, curabitur vulputate a imperdiet vestibulum nam malesuada lectus montes, tempus donec elementum mollis commodo tempor diam hac. Torquent magnis luctus tincidunt class eu cubilia auctor ullamcorper rhoncus netus, litora sed id nunc potenti molestie ultricies augue eros tellus, fermentum est at donec ligula congue libero faucibus hendrerit.</p>
 <br>
 <h2>Animaciones</h2>
+<h3>Añadimos animaciones a las cajas para que cambien de color, una empieza en amarillo y la otra en verde</h3>
 <div id="cajal">
     <p> CAJA1,  tiene propiedad   float puesta  a none,  por lo que aparece  donde  le corresponde  sin  flotar</p>
      
@@ -183,6 +260,7 @@
 </div>
 
 <h2>Tamaño de cajas</h2>
+<h3>Añadimos un borde de tamaño 3 y 6 respectivamente a las cajas</h3>
 <div id="cajatamanuno">
     <p>Esta  es la primera  caja <br/>
     flota a la izquierda  de la segunda  caja </p>
