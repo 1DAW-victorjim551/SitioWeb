@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 18. Usos de la Propiedad Flex</title>
+    <style>
+         .contenedor {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .columnauno {
+            display: flex;
+            margin: 10px;
+        }
+
+        .columnados {
+            display: flex;
+        }
+
+        h2{
+            transition: transform 0.3s ease-in-out, 0.3s ease-in-out;
+        }
+        .h2{
+            transform: scale(1.2);
+            background-color: rgb(30, 32, 177);
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <h2><center>EJEMPLOS DEL MODULO FLEX</center</h2>
+    <div class="container">
+        <div class="columnauno">
+    <h2>Horario</h2>
+    <table border="1">
+        <tr bgcolor="#fcdb03">
+            <td bgcolor="#03fce7">Hora</td>
+            <td>Lunes</td>
+            <td>Martes</td>
+            <td>Miercoles</td>
+            <td>Jueves</td>
+            <td>Viernes</td>
+        </tr>
+
+        <tr>
+            <td bgcolor="#03fce7">8:30</td>
+            <td rowspan="3" bgcolor="#0390fc">Programación</td>
+            <td rowspan="2" bgcolor="#0390fc">Programación</td>
+            <td rowspan="2" bgcolor="#21ded1">FOL</td>
+            <td bgcolor="#21ded1">FOL</td>
+            <td rowspan="3" bgcolor="#0390fc">Programación</td>
+        </tr>
+
+        <tr>
+            <td bgcolor="#03fce7">9:30</td>
+            <td rowspan="2" bgcolor="#77fc03">Lenguaje de Marcas</td>
+        </tr>
+
+        <tr>
+            <td bgcolor="#03fce7">10:30</td>
+            <td bgcolor="#03fc41">Sostenibilidad</td>
+            <td bgcolor="#77fc03">Lenguaje de Marcas</td>
+        </tr>
+
+        <tr>
+            <td bgcolor="#03fce7">11:30</td>
+            <td colspan="5" bgcolor="#de9f21"><center>RECREO</center></td>
+        </tr>
+
+        <tr>
+            <td bgcolor="#03fce7">12:00</td>
+            <td rowspan="3" bgcolor="#f0fc03">Base de Datos</td>
+            <td rowspan="3" bgcolor="#f0fc03">Base de Datos</td>
+            <td rowspan="2" bgcolor="#fc030f">Sistemas Informáticos</td>
+            <td rowspan="3" bgcolor="#fc030f">Sistemas Informáticos</td>
+            <td rowspan="3" bgcolor="#b503fc">Entornos de Desarrollo</td>
+        </tr>
+
+        <tr>
+            <td bgcolor="#03fce7">13:00</td>
+        </tr>
+
+        <tr>
+            <td bgcolor="#03fce7">14:00</td>
+            <td bgcolor="#fc9803">Digitalización</td>
+        </tr>
+    </table>
+
+    <img src="imagenes/patioleoncitos.jpg" alt="patioleones" width="550px" height="400px">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yHehpAAvK5E?si=ta5EjYwDcdUvqBwN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<div class="columnados">
+    <iframe width="700" height="700" src="https://www.w3schools.com/css/css3_flexbox.asp"></iframe>
+    <iframe width="700" height="700" src="https://iesmartinezm.es/"></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6NXMnINw_b0?si=jcL7DR1nYdVt2zzO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</div>
+</body>
+</html>
