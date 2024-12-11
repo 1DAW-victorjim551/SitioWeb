@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-size: 50px;
+        }
+        h1{
+            text-align: center;
+        }
+        .container{
+            width: 35%;
+            height: 600px;
+            float: left;
+            align-content: center;
+            background-color: aqua;
+            margin-left: 10%;
+        }
+        #rojo{
+            background-color: red;
+        }
+        #verde{
+            background-color: green;
+        }
+    </style>
+
+</head>
+<body style="background-color: antiquewhite;">
+
+    <center>
+        <div class="container" id="rojo">
+            <TABLE border="1">
+                <tr>
+                    <td rowspan="2">1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <!--rawspan-->
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>10</td>
+                    <td colspan="2">11</td>
+                    <!--Colspan-->
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                </tr>
+            </TABLE>
+    </div>
+
+    <div class="container" id="verde">
+        <TABLE border="1">
+            <td>D</td>
+            <td>I</td>
+            <td>V</td>
+            <TD>2</TD>
+        </TABLE>
+    </div>
+    </center>
+
+    <div>
+        <p><h1>PROXMOX SE HA CAIDO</h1></p>
+    </div>
+
+</body>
+</html>
